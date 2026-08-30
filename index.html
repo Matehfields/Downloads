@@ -29,7 +29,6 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-
       padding: 16px 0;
       border-bottom: 1px solid #333;
     }
@@ -43,7 +42,6 @@
       border: 1px solid #eee;
       background: #eee;
       color: #111;
-
       font-size: 14px;
       font-weight: bold;
       text-decoration: none;
@@ -53,34 +51,143 @@
       background: #111;
       color: #eee;
     }
+
+    .download-dropdown {
+      border-bottom: 1px solid #333;
+    }
+
+    .download-dropdown summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+
+    .download-dropdown summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .dropdown-arrow {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #eee;
+      background: #eee;
+      color: #111;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1;
+      transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+
+    .download-dropdown summary:hover .dropdown-arrow {
+      background: #111;
+      color: #eee;
+    }
+
+    .download-dropdown[open] .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 6px;
+      padding: 0 0 16px;
+    }
+
+    .part-button {
+      min-width: 0;
+      padding: 8px 4px;
+      border: 1px solid #555;
+      background: #1b1b1b;
+      color: #eee;
+      font-size: 13px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .part-button:hover {
+      border-color: #eee;
+      background: #eee;
+      color: #111;
+    }
+
+    @media (max-width: 480px) {
+      .parts-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
   </style>
 </head>
 
 <body>
-
   <div class="downloads">
 
     <div class="download">
       <span class="download-name">Minecraft</span>
       <a class="download-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/PolyMC.7z" download>Download</a>
     </div>
+
     <div class="download">
       <span class="download-name">VPN (Senha: 1234)</span>
       <a class="download-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/Ultrasurf.7z" download>Download</a>
     </div>
+
     <div class="download">
       <span class="download-name">Discord Armazenamento (Mais de 300 jogos)</span>
       <a class="download-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/DiscordArmazenamento.7z" download>Download</a>
     </div>
+
     <div class="download">
-      <span class="download-name">GTA V 2GB (Seco)</span>
+      <span class="download-name">GTA V 2GB Parte 1/2</span>
+      <a class="download-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.001" download>Download</a>
+    </div>
+
+    <div class="download">
+      <span class="download-name">GTA V 2GB Parte 2/2</span>
+      <a class="download-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.002" download>Download</a>
+    </div>
+
+    <div class="download">
+      <span class="download-name">GTA V 2GB (Seco) Download alternativo</span>
       <a class="download-button" href="https://drive.google.com/file/d/1tfmPEy3URHkm8L4IquE6gmvQJqMhgTo8/view?usp=sharing" download>Download</a>
     </div>
+
+    <details class="download-dropdown">
+      <summary>
+        <span class="download-name">GTA V 20GB</span>
+        <span class="dropdown-arrow" aria-hidden="true">▼</span>
+      </summary>
+
+      <div class="parts-grid">
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.001" download>Parte 1/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.002" download>Parte 2/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.003" download>Parte 3/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.004" download>Parte 4/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.005" download>Parte 5/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.006" download>Parte 6/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.007" download>Parte 7/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.008" download>Parte 8/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.009" download>Parte 9/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.010" download>Parte 10/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.011" download>Parte 11/12</a>
+        <a class="part-button" href="https://github.com/Matehfields/Downloads/releases/latest/download/GTAV.7z.012" download>Parte 12/12</a>
+      </div>
+    </details>
+
     <div class="download">
-      <span class="download-name">GTA V 20GB (Com história (Assim espero (Não testei)))</span>
+      <span class="download-name">GTA V 20GB Download alternativo</span>
       <a class="download-button" href="https://drive.google.com/file/d/1hduPenXGORwonuGgpyt8PoWmP423p9Qd/view?usp=sharing" download>Download</a>
     </div>
-  </div>
 
+  </div>
 </body>
 </html>
